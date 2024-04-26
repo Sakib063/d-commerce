@@ -12,4 +12,9 @@ class buyer extends User
     protected $fillable=[
         'home_address',
     ];
+
+    protected function user():BelongsTo
+    {
+        return $this->belongsto(User::class);
+    }
 }

@@ -45,4 +45,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    protected function buyer():HasMany
+    {
+        return $this->hasmany(Buyer::class);
+    }
+
+    protected function seller():HasMany
+    {
+        return $this->hasmany(Seller::class);
+    }
 }

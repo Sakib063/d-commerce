@@ -13,4 +13,9 @@ class seller extends User
         'shop_address',
         'shop_name',
     ];
+
+    protected function user():BelongsTo
+    {
+        return $this->belongsto(User::class);
+    }
 }
